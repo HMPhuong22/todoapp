@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  todoapp:
+    container_name: new-todoapp-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"     # ← bạn có thể đổi 8080 thành cổng mong muốn
+    restart: unless-stopped
